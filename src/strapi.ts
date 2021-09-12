@@ -32,6 +32,7 @@ export interface StrapiAppContext
 }
 
 export interface StrapiInstance {
+  app: any;
   plugin(uid: string): ServerPluginInstance;
   controller(uid: string): any;
   service(uid: string): any;

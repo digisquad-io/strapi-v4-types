@@ -38,7 +38,7 @@ export function defineServerPlugin<T extends ServerPlugin>(
   plugin: (strapi: StrapiInstance) => T
 ): T {
   //@ts-ignore
-  return plugin();
+  return plugin(strapi);
 }
 
 export function defineAdminPlugin<T extends AdminPluginConfig>(
@@ -52,7 +52,7 @@ export function defineServerMiddleware<T extends ServerMiddleware>(
   middleware: (strapi: StrapiInstance) => T
 ): T {
   //@ts-ignore
-  return middleware();
+  return middleware(strapi);
 }
 
 export function defineConfig<T extends ServerPluginConfig>(config: () => T): T {
@@ -71,12 +71,12 @@ export function withStrapi<T extends any>(
   scoped: (strapi: StrapiInstance) => T
 ): T {
   //@ts-ignore
-  return scoped();
+  return scoped(strapi);
 }
 
 export function withAdminApp<T extends any>(
   scoped: (app: AdminAppInstance) => T
 ): T {
   //@ts-ignore
-  return scoped();
+  return scoped(app);
 }
