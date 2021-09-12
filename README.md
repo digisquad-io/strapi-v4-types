@@ -1,12 +1,16 @@
-# Strapi V4 - Typescript plugins
+# Strapi V4 - @strapi/types package proposal
 
 This package is a proposal to be part of @strapi packages as @strapi/types
 
-**It implements:** 
+See also plugin example here:  https://github.com/digisquad-io/strapi-plugin-typescript-template
+
+**Implements:** 
 - Content type definition file syntax: https://github.com/strapi/rfcs/pull/28
 - Plugin API RFC: https://github.com/strapi/rfcs/pull/23
 
-**Tested on next.11:**
+
+### How to test this feature
+_Tested on next.11_
 
 1. Create `@strapi/types` package:
    1. clone this repository
@@ -26,11 +30,11 @@ This package is a proposal to be part of @strapi packages as @strapi/types
    1. run `yarn install` 
    1. add `"strapi-plugin-typescript-template": "latest"`
    1. run `yarn link "strapi-plugin-typescript-template"`
-   1. update `loadJsFile` from `@strapi/strapi`
+   1. **update `loadJsFile` from `@strapi/strapi`** (see diff below)
    1. yay your typescript plugin is loaded :smile:
 
 
-**loadJsFile**
+#### edit `loadJsFile`
 
 A small hack is needed in `@strapi/strapi/lib/core/app-configuration/load-config-file.js`
 
@@ -58,10 +62,9 @@ const loadJsFile = file => {
 };
 ```
 
+## Usage
 
-**usage**
-
-[see example plugin here](https://github.com/digisquad-io/strapi-plugin-typescript-template/blob/main/src/strapi-server.ts)
+[see full example plugin here](https://github.com/digisquad-io/strapi-plugin-typescript-template)
 
 ```ts
 // src/server/bootstrap.ts
@@ -119,7 +122,7 @@ export const restaurants = defineContentType(() => ({
       pluralName: 'restaurants',
       displayName: 'Restaurants',
     },
-
+    options: {},
     attributes: {
       name: {
         type: "string"
