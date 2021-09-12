@@ -51,7 +51,7 @@ const loadJsFile = file => {
 +    // use export.default from ESM or Typescript 
 +    if (jsModule && typeof jsModule.default === 'function') {
 +      return jsModule.default({ env });
-+    } else if (typeof jsModule.default === 'object') {
++    } else if (jsModule && typeof jsModule.default === 'object') {
 +      return jsModule.default
 +    }
 
