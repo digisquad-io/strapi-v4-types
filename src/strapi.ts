@@ -50,9 +50,13 @@ export interface ServerPolicy {
 }
 
 export interface ServerMiddleware {
-  default?: { enabled: boolean } & Record<string, any>;
-  beforeInitialize?: () => void;
-  initialize?: () => void;
+  defaults?: {
+    [name: string]: { enabled: boolean } & Record<string, any>
+  };
+  load: {
+    beforeInitialize?: () => void;
+    initialize?: () => void;
+  }
 }
 
 export interface ServerPluginInstance {
