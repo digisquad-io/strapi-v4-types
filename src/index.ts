@@ -39,7 +39,7 @@ export function defineServerMiddleware<T extends ServerMiddleware>(middleware: (
   //@ts-ignore
   return middleware()
 }
-export function defineConfig<T extends ServerPluginConfig>(config: (context: StrapiConfigContext) => T): T {
+export function defineConfig<T extends ServerPluginConfig>(config: () => T): T {
   //@ts-ignore
   return config()
 }

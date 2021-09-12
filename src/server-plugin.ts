@@ -1,5 +1,6 @@
 import type {
   StrapiAppContext,
+  StrapiConfigContext,
   ServerController,
   ServerPolicy,
   ServerMiddleware,
@@ -50,8 +51,8 @@ export interface StrapiContentType {
 export interface ServerPluginConfig {
   default:
     | Record<string, any>
-    | ((ctx: StrapiAppContext) => Record<string, any>);
-  validator?: () => boolean;
+    | ((context: StrapiConfigContext) => Record<string, any>);
+  validator?: () => boolean | void;
 }
 
 export interface ServerPlugin {
