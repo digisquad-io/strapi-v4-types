@@ -47,3 +47,7 @@ export function defineContentType<T extends StrapiContentType>(contentType: () =
   //@ts-ignore
   return contentType()
 }
+export function withStrapi<T extends any>(scoped: (strapi: StrapiInstance) => T): T {
+  //@ts-ignore
+  return scoped()
+}

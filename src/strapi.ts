@@ -63,6 +63,5 @@ export interface ServerPluginInstance {
   service(uid: string): any;
   model(uid: string): any;
   policy(uid: string): ServerPolicy;
-  hook(uid: string): any;
   middleware(uid: string): ServerMiddleware;
 }
