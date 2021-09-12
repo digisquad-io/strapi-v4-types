@@ -29,7 +29,7 @@ _Tested on next.11_
    1. create strapi app
    1. run `yarn install` 
    1. add `"strapi-plugin-typescript-template": "latest"`
-   1. run `yarn link "strapi-plugin-typescript-template"`
+   1. run `yarn link "strapi-plugin-typescript-template"` in your `package.json`
    1. **update `loadJsFile` from `@strapi/strapi`** (see diff below)
    1. yay your typescript plugin is loaded :smile:
 
