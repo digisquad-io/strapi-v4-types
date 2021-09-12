@@ -2,12 +2,16 @@
 
 This package is a proposal to be part of @strapi packages as @strapi/types
 
-See also plugin example here:  https://github.com/digisquad-io/strapi-plugin-typescript-template
+**Goal**
+
+Typescript empower javscript with static code analysis, which leads us with more robust code. 
+Even if strapi core is not written in Typescript we can expose the Developer API declaration (Plugins / ContentType / etc...)
 
 **Implements:** 
 - Content type definition file syntax: https://github.com/strapi/rfcs/pull/28
 - Plugin API RFC: https://github.com/strapi/rfcs/pull/23
 
+See also plugin example here:  https://github.com/digisquad-io/strapi-plugin-typescript-template
 
 ### How to test this feature
 _Tested on next.11_
