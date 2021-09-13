@@ -13,7 +13,8 @@ Even if strapi core is not written in Typescript we can expose the Developer API
 
 See also plugin example here:  https://github.com/digisquad-io/strapi-plugin-typescript-template
 
-### How to test this feature
+<details>
+   <summary><strong>How to test this feature</strong></summary>
 _Tested on next.11_
 
 1. Create `@strapi/types` package:
@@ -65,6 +66,7 @@ const loadJsFile = file => {
   }
 };
 ```
+</details>
 
 ## Usage
 
